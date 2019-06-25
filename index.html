@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>three.js webgl - shaders - ocean</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- CSS Styles -->
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/header.css">
+    <link type="text/css" rel="stylesheet" href="css/utils.css">
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--  BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css"/>
+
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <!-- The social media icon bar -->
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-amazon"></i></a>
+    </div>
+    <div class="kz-photo d-flex justify-content-center align-content-center" style="display: inline-flex">
+        <ul class="countdown">
+            <li>
+                <span class="days"></span>
+            </li>
+            <li>:</li>
+            <li>
+                <span class="hours"></span>
+            </li>
+            <li>:</li>
+            <li>
+                <span class="minutes"></span>
+            </li>
+            <li>:</li>
+            <li>
+                <span class="seconds"></span>
+            </li>
+
+        </ul>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="260px" height="260px">
+            <circle class="line ext" cx="130" cy="130" r="117"/>
+            <circle class="line days-c" cx="130" cy="130" r="107"/>
+            <circle class="line hours-c" cx="130" cy="130" r="97"/>
+            <circle class="line minutes-c" cx="130" cy="130" r="87"/>
+            <circle class="line secondes-c" cx="130" cy="130" r="77"/>
+            <circle class="line in" cx="130" cy="130" r="68"/>
+        </svg>
+
+    </div>
+    <div class="d-flex justify-content-center align-content-center header" style="@font-family: 'Hobbiton'">
+        <h1 aria-label="Susanna & Matthew Wedding!"></h1>
+        <!--  -->
+    </div>
+
+    <div class="bird-container bird-container--one">
+        <div class="bird bird--one"></div>
+    </div>
+
+    <div class="bird-container bird-container--two">
+        <div class="bird bird--two"></div>
+    </div>
+
+    <div class="bird-container bird-container--three">
+        <div class="bird bird--three"></div>
+    </div>
+
+    <div class="bird-container bird-container--four">
+        <div class="bird bird--four"></div>
+    </div>
+
+
+    <!-- JS Libraries -->
+    <script src="js/three.js"></script>
+    <script src="js/controls/OrbitControls.js"></script>
+    <script src="js/objects/Water.js"></script>
+    <script src="js/objects/Sky.js"></script>
+    <script src="js/WebGL.js"></script>
+    <script src="js/libs/stats.min.js"></script>
+    <script src="js/libs/dat.gui.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="js/jquery/jquery.js"></script>
+
+    <!-- Countdown Time -->
+    <script src="js/countdowntime/moment.min.js"></script>
+    <script src="js/countdowntime/moment-timezone.min.js"></script>
+    <script src="js/countdowntime/moment-timezone-with-data.min.js"></script>
+    <script src="js/countdowntime/countdowntime.js"></script>
+    <script>
+        $('.cd100').countdown100({
+            /*Set Endtime here*/
+            /*Endtime must be > current time*/
+            endtimeYear: 0,
+            endtimeMonth: 0,
+            endtimeDate: 35,
+            endtimeHours: 19,
+            endtimeMinutes: 0,
+            endtimeSeconds: 0,
+            timeZone: ""
+            // ex:  timeZone: "America/New_York"
+            //go to " http://momentjs.com/timezone/ " to get timezone
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap/bootstrap.js"></script>
+
+    <!-- Beach Background -->
+    <script src="js/background.js"></script>
+
+</body>
+</html>

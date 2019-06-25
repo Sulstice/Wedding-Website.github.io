@@ -1,0 +1,442 @@
+/* ####################################### */
+/*                                         */
+/*                                         */
+/*        TABLE OF CONTENTS                */
+/*                                         */
+/*         - Main Page                     */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/* ####################################### */
+
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+@font-face {
+	font-family: 'Hobbiton';
+	src: url('fonts/hobbitonbrushhand-webfont.ttf') format('truetype');
+
+}
+
+.header {
+	font-family: 'Hobbiton';
+	padding-top: 55vh;
+	padding-left: 3vw;
+	color: gainsboro;
+}
+
+.header h1 {
+	font-size: 130px !important;
+}
+
+#container {
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -9999;
+}
+
+iframe {
+	z-index : -9999;
+	position: absolute;
+	top : 0;
+	left    : 0;
+	width   : 100%;
+	margin  : 0;
+	padding : 0;
+}
+
+.dg.ac {
+	z-index: 0 !important; /* TODO Solve this in HTML */
+}
+
+/* ####################################### */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*             BIRD CONTAINER              */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/* ####################################### */
+
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+	-webkit-animation-name: fly-cycle;
+	animation-name: fly-cycle;
+	-webkit-animation-timing-function: steps(10);
+	animation-timing-function: steps(10);
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.bird--one {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-delay: -0.5s;
+	animation-delay: -0.5s;
+}
+.bird--two {
+	-webkit-animation-duration: 0.9s;
+	animation-duration: 0.9s;
+	-webkit-animation-delay: -0.75s;
+	animation-delay: -0.75s;
+}
+.bird--three {
+	-webkit-animation-duration: 1.25s;
+	animation-duration: 1.25s;
+	-webkit-animation-delay: -0.25s;
+	animation-delay: -0.25s;
+}
+.bird--four {
+	-webkit-animation-duration: 1.1s;
+	animation-duration: 1.1s;
+	-webkit-animation-delay: -0.5s;
+	animation-delay: -0.5s;
+}
+
+.bird-container {
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	-webkit-transform: scale(0) translateX(-10vw);
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	-webkit-animation-name: fly-right-one;
+	animation-name: fly-right-one;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.bird-container--one {
+	-webkit-animation-duration: 15s;
+	animation-duration: 15s;
+	-webkit-animation-delay: 0;
+	animation-delay: 0;
+}
+.bird-container--two {
+	-webkit-animation-duration: 16s;
+	animation-duration: 16s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.bird-container--three {
+	-webkit-animation-duration: 14.6s;
+	animation-duration: 14.6s;
+	-webkit-animation-delay: 9.5s;
+	animation-delay: 9.5s;
+}
+.bird-container--four {
+	-webkit-animation-duration: 16s;
+	animation-duration: 16s;
+	-webkit-animation-delay: 10.25s;
+	animation-delay: 10.25s;
+}
+
+@-webkit-keyframes fly-cycle {
+	100% {
+		background-position: -900px 0;
+	}
+}
+
+@keyframes fly-cycle {
+	100% {
+		background-position: -900px 0;
+	}
+}
+@-webkit-keyframes fly-right-one {
+	0% {
+		-webkit-transform: scale(0.3) translateX(-10vw);
+		transform: scale(0.3) translateX(-10vw);
+	}
+	10% {
+		-webkit-transform: translateY(2vh) translateX(10vw) scale(0.4);
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	20% {
+		-webkit-transform: translateY(0vh) translateX(30vw) scale(0.5);
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	30% {
+		-webkit-transform: translateY(4vh) translateX(50vw) scale(0.6);
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	40% {
+		-webkit-transform: translateY(2vh) translateX(70vw) scale(0.6);
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	50% {
+		-webkit-transform: translateY(0vh) translateX(90vw) scale(0.6);
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	60% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	100% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+}
+@keyframes fly-right-one {
+	0% {
+		-webkit-transform: scale(0.3) translateX(-10vw);
+		transform: scale(0.3) translateX(-10vw);
+	}
+	10% {
+		-webkit-transform: translateY(2vh) translateX(10vw) scale(0.4);
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	20% {
+		-webkit-transform: translateY(0vh) translateX(30vw) scale(0.5);
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	30% {
+		-webkit-transform: translateY(4vh) translateX(50vw) scale(0.6);
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	40% {
+		-webkit-transform: translateY(2vh) translateX(70vw) scale(0.6);
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	50% {
+		-webkit-transform: translateY(0vh) translateX(90vw) scale(0.6);
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	60% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	100% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.6);
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+}
+@-webkit-keyframes fly-right-two {
+	0% {
+		-webkit-transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}
+	10% {
+		-webkit-transform: translateY(0vh) translateX(10vw) scale(0.4);
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}
+	20% {
+		-webkit-transform: translateY(-4vh) translateX(30vw) scale(0.6);
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}
+	30% {
+		-webkit-transform: translateY(1vh) translateX(50vw) scale(0.45);
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}
+	40% {
+		-webkit-transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}
+	50% {
+		-webkit-transform: translateY(0vh) translateX(90vw) scale(0.45);
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}
+	51% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	100% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+}
+@keyframes fly-right-two {
+	0% {
+		-webkit-transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}
+	10% {
+		-webkit-transform: translateY(0vh) translateX(10vw) scale(0.4);
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}
+	20% {
+		-webkit-transform: translateY(-4vh) translateX(30vw) scale(0.6);
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}
+	30% {
+		-webkit-transform: translateY(1vh) translateX(50vw) scale(0.45);
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}
+	40% {
+		-webkit-transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}
+	50% {
+		-webkit-transform: translateY(0vh) translateX(90vw) scale(0.45);
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}
+	51% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	100% {
+		-webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+}
+
+/* ####################################### */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*           COUNTDOWN TIMER               */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/*                                         */
+/* ####################################### */
+
+
+svg {
+	width: 260px;
+	height: 260px;
+	position: absolute;
+	transform:rotate(-90deg);
+}
+
+ul {
+	color: white;
+	position: absolute;
+	list-style: none;
+	z-index: 99;
+	width: 260px;
+	height: auto;
+	font-size: 14px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	color: white;
+	padding-left:7vh;
+	line-height: 260px;
+}
+
+li {
+	display:inline-block;
+}
+
+.line {
+	fill: none;
+	stroke: white;
+	stroke-width: 1px;
+}
+
+.ext {
+	stroke:white;
+	stroke-width:1px;
+	stroke-dasharray: 1,60.2;
+}
+
+.in {
+	stroke:white;
+	stroke-width:1px;
+	stroke-dasharray: 1,70.1;
+}
+
+.days-c {
+	stroke-dasharray: 672;
+	transform:rotate(-270deg);
+}
+
+.hours-c {
+	stroke-dasharray: 609;
+	transform:rotate(-180deg);
+}
+
+.minutes-c {
+	stroke-dasharray: 547;
+	transform:rotate(-90deg);
+}
+
+.secondes-c {
+	stroke: tomato;
+	stroke-dashoffset:0;
+	stroke-dasharray: 484;
+	transform:rotate(-360deg);
+}
+
+circle {
+	transform-origin:center;
+	transition:transform 1.5s ease;}
+
+.kz-photo:hover circle {
+	transform:rotate(0deg);
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+	position: fixed;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+	display: block;
+	text-align: center;
+	padding: 16px;
+	transition: all 0.3s ease;
+	color: white;
+	font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+	opacity: 1;
+}
+
+.facebook {
+	background: dodgerblue;
+	color: white;
+}
+
+.twitter {
+	background: lightskyblue;
+	color: white;
+}
+
+.google {
+	background: tomato;
+	color: white;
+}
+
+.linkedin {
+	background: darkslategray;
+	color: white;
+}
+
+.youtube {
+	background: darkslategray;
+	color: white;
+}
